@@ -1,12 +1,18 @@
 import React from "react";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Counter from "./pages/Counter";
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>Hello Vite + React + Tailwind CSS!</p>
-            </header>
-        </div>
+        <>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/counter" component={Counter} />
+                </Switch>
+            </Router>
+        </>
     );
 }
 
